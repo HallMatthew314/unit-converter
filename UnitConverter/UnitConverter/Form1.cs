@@ -19,34 +19,58 @@ namespace UnitConverter
             InitializeComponent();
 
             mode = new DistanceMode(this);
-            label_Mode.Text = mode.ToString();
+            setModeOptions();
         }
 
-        private void changeMode(EMode _mode)
+        private void setModeOptions()
         {
-            mode.Update(_mode);
             label_Mode.Text = mode.ToString();
+
+            comboBox_BaseUnit.Items.Clear();
+            comboBox_TargetUnit.Items.Clear();
+            
+            foreach(var item in mode.UnitValues)
+            {
+                comboBox_BaseUnit.Items.Add(item);
+                comboBox_TargetUnit.Items.Add(item);
+            }
         }
 
         private void button_DistanceMode_Click(object sender, EventArgs e)
         {
-            changeMode(EMode.DISTANCE);
+            mode.Update(EMode.DISTANCE);
+            setModeOptions();
         }
 
         private void button_WeightMode_Click(object sender, EventArgs e)
         {
-            changeMode(EMode.WEIGHT);
+            mode.Update(EMode.WEIGHT);
+            setModeOptions();
         }
 
         private void button_TemperatureMode_Click(object sender, EventArgs e)
         {
-            changeMode(EMode.TEMPERATURE);
+            mode.Update(EMode.TEMPERATURE);
+            setModeOptions();
         }
 
         public Mode CurrentMode
         {
             get => mode;
             set => mode = value;
+        }
+
+        private void button_Convert_Click(object sender, EventArgs e)
+        {
+            double baseValue = Convert.ToDouble(textBox_Input.Text);
+
+            double result = mode.ConvertUnit(
+                (int)comboBox_BaseUnit.SelectedItem,
+                (int)comboBox_TargetUnit.SelectedItem,
+                baseValue
+            );
+
+            textBox_Output.Text = result.ToString();
         }
     }
 }

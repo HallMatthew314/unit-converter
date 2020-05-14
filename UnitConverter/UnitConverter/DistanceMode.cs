@@ -63,6 +63,11 @@ namespace UnitConverter
             };
         }
 
+        public override Array UnitValues
+        {
+            get => Enum.GetValues(typeof(EDistances));
+        }
+
         public override string ToString()
         {
             return "Distance Mode";

@@ -17,6 +17,11 @@ namespace UnitConverter
     {
         public WeightMode(Form1 _host) : base(_host){}
 
+        public override Array UnitValues
+        {
+            get => Enum.GetValues(typeof(EWeights));
+        }
+
         public override string ToString()
         {
             return "Weight Mode";

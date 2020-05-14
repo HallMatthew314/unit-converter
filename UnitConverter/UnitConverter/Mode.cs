@@ -49,6 +49,8 @@ namespace UnitConverter
             return conversions[_base][_target](_amount);
         }
 
+        public abstract Array UnitValues { get; }
+
         public abstract override string ToString();
     }
 }

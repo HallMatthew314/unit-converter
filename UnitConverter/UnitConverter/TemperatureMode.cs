@@ -17,6 +17,11 @@ namespace UnitConverter
     {
         public TemperatureMode(Form1 _host) : base(_host){}
 
+        public override Array UnitValues
+        {
+            get => Enum.GetValues(typeof(ETemperatures));
+        }
+
         public override string ToString()
         {
             return "Temperature Mode";
