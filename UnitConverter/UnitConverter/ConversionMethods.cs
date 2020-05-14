@@ -102,24 +102,40 @@ public class ConversionMethods
     }
 
 
+    /* Weight Conversions */
+        /* g lb kg */
+    public static double  gTolb(double _inputValue)
+    {
+        return _inputValue / 453.592;
+    }   
+    public static double stoneTolb (double _inputValue)
+    {
+        return _inputValue * 14.0;
+    }
+    public static double lbTog(double _inputValue)
+    {
+        return _inputValue * 453.592;
+    }
+    public static double lbToStone(double _inputVale)
+    {
+        return _inputVale / 14.0;
+    }
+    public static double stoneTog(double _inputValue)
+    {
+        return _inputValue * 6350.29;
+    }
 
+    public static double gToStone(double _inputValue)
+    {
+        return _inputValue / 6350.29;
+    }
 
 
 
 
 
     public static void test()
-    { 
-
-
-
-
-        Console.WriteLine(cToF(100));
-        Console.WriteLine(kToF(100));
-        Console.WriteLine(cToK(100));
-        Console.WriteLine(kToC(100));
-        Console.WriteLine(fToK(100));
-
+    {
     }
 
 
