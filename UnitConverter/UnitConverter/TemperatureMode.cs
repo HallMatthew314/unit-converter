@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace UnitConverter
 {
+    public enum ETemperatures
+    {
+        Celsius,
+        Fahrenheit,
+        Kelvin
+    }
+
     public class TemperatureMode : Mode
     {
         public TemperatureMode(Form1 _host) : base(_host){}

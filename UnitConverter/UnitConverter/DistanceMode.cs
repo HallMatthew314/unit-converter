@@ -6,6 +6,14 @@ using System.Threading.Tasks;
 
 namespace UnitConverter
 {
+    public enum EDistances
+    {
+        Centimetres,
+        Millimetres,
+        Metres,
+        Inches
+    }
+
     public class DistanceMode : Mode
     {
         public DistanceMode(Form1 _host) : base(_host){}
