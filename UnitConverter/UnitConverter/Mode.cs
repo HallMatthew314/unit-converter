@@ -16,6 +16,7 @@ namespace UnitConverter
     public abstract class Mode
     {
         protected Form1 host;
+        protected Dictionary<int, Dictionary<int, Func<double, double>>> conversions;
 
         public Mode(Form1 _host)
         {
@@ -43,9 +44,9 @@ namespace UnitConverter
             }
         }
 
-        public double ConvertUnit()
+        public double ConvertUnit(int _base, int _target, double _amount)
         {
-            throw new NotImplementedException();
+            return conversions[_base][_target](_amount);
         }
 
         public abstract override string ToString();
