@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace UnitConverter
 {
-    class WeightMode : Mode
+    public class WeightMode : Mode
     {
-        public WeightMode()
-        {
-            //
-        }
+        public WeightMode(Form1 _host) : base(_host){}
 
         public override string ToString()
         {

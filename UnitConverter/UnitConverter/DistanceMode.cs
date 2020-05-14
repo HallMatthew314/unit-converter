@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace UnitConverter
 {
-    class DistanceMode : Mode
+    public class DistanceMode : Mode
     {
-        public DistanceMode()
-        {
-            //
-        }
+        public DistanceMode(Form1 _host) : base(_host){}
 
         public override string ToString()
         {

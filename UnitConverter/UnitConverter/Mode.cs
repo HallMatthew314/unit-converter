@@ -13,31 +13,34 @@ namespace UnitConverter
         TEMPERATURE
     }
 
-    abstract class Mode
+    public abstract class Mode
     {
-        public Mode Update(EMode _mode)
-        {
-            Mode m = null;
+        protected Form1 host;
 
+        public Mode(Form1 _host)
+        {
+            host = _host;
+        }
+
+        public void Update(EMode _mode)
+        {
             switch (_mode)
             {
                 case EMode.DISTANCE:
-                    m = new DistanceMode();
+                    host.CurrentMode = new DistanceMode(host);
                     break;
 
                 case EMode.WEIGHT:
-                    m = new WeightMode();
+                    host.CurrentMode = new WeightMode(host);
                     break;
 
                 case EMode.TEMPERATURE:
-                    m = new TemperatureMode();
+                    host.CurrentMode = new TemperatureMode(host);
                     break;
 
                 default:
                     throw new ArgumentOutOfRangeException("Bad value for _mode");
             }
-
-            return m;
         }
 
         public double ConvertUnit()

@@ -36,6 +36,7 @@
             this.textBox_Output = new System.Windows.Forms.TextBox();
             this.comboBox_BaseUnit = new System.Windows.Forms.ComboBox();
             this.comboBox_TargetUnit = new System.Windows.Forms.ComboBox();
+            this.label_Mode = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button_Convert
@@ -55,6 +56,7 @@
             this.button_DistanceMode.TabIndex = 1;
             this.button_DistanceMode.Text = "Distance Mode";
             this.button_DistanceMode.UseVisualStyleBackColor = true;
+            this.button_DistanceMode.Click += new System.EventHandler(this.button_DistanceMode_Click);
             // 
             // button_WeightMode
             // 
@@ -64,6 +66,7 @@
             this.button_WeightMode.TabIndex = 2;
             this.button_WeightMode.Text = "Weight Mode";
             this.button_WeightMode.UseVisualStyleBackColor = true;
+            this.button_WeightMode.Click += new System.EventHandler(this.button_WeightMode_Click);
             // 
             // button_TemperatureMode
             // 
@@ -73,6 +76,7 @@
             this.button_TemperatureMode.TabIndex = 3;
             this.button_TemperatureMode.Text = "Temperature Mode";
             this.button_TemperatureMode.UseVisualStyleBackColor = true;
+            this.button_TemperatureMode.Click += new System.EventHandler(this.button_TemperatureMode_Click);
             // 
             // textBox_Input
             // 
@@ -106,11 +110,21 @@
             this.comboBox_TargetUnit.Size = new System.Drawing.Size(121, 21);
             this.comboBox_TargetUnit.TabIndex = 7;
             // 
+            // label_Mode
+            // 
+            this.label_Mode.AutoSize = true;
+            this.label_Mode.Location = new System.Drawing.Point(29, 406);
+            this.label_Mode.Name = "label_Mode";
+            this.label_Mode.Size = new System.Drawing.Size(62, 13);
+            this.label_Mode.TabIndex = 8;
+            this.label_Mode.Text = "label_Mode";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 441);
+            this.Controls.Add(this.label_Mode);
             this.Controls.Add(this.comboBox_TargetUnit);
             this.Controls.Add(this.comboBox_BaseUnit);
             this.Controls.Add(this.textBox_Output);
@@ -136,6 +150,7 @@
         private System.Windows.Forms.TextBox textBox_Output;
         private System.Windows.Forms.ComboBox comboBox_BaseUnit;
         private System.Windows.Forms.ComboBox comboBox_TargetUnit;
+        private System.Windows.Forms.Label label_Mode;
     }
 }
 

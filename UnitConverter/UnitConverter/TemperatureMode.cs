@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace UnitConverter
 {
-    class TemperatureMode : Mode
+    public class TemperatureMode : Mode
     {
-        public TemperatureMode()
-        {
-            //
-        }
+        public TemperatureMode(Form1 _host) : base(_host){}
 
         public override string ToString()
         {
