@@ -78,27 +78,27 @@ public class ConversionMethods
 
     public static double kToC (double _inputVale)
     {
-
+        return _inputVale - 273.15;
     }
     public static double cToK(double _inputVale)
     {
-
+        return _inputVale + 273.15;
     }
     public static double fToC(double _inputVale)
     {
-
+        return (_inputVale - 32) * (5.0 / 9.0);
     }
     public static double cToF(double _inputVale)
     {
-      
+        return (_inputVale * (9.0 / 5.0)) + 32;
     }
     public static double kToF(double _inputVale)
     {
-
+        return (_inputVale * (9.0 / 5.0)) + 32 - 273.15;
     }
     public static double fToK(double _inputVale)
     {
-
+        return (_inputVale - 32) * (5.0 / 9.0) + 273.15;
     }
 
 
@@ -112,8 +112,14 @@ public class ConversionMethods
     { 
 
 
-        double a = inchTomm(6);
-        Console.WriteLine(a);
+
+
+        Console.WriteLine(cToF(100));
+        Console.WriteLine(kToF(100));
+        Console.WriteLine(cToK(100));
+        Console.WriteLine(kToC(100));
+        Console.WriteLine(fToK(100));
+
     }
 
 
