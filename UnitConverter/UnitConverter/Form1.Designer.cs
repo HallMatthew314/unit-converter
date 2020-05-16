@@ -47,6 +47,7 @@
             this.button_Convert.TabIndex = 0;
             this.button_Convert.Text = "Convert";
             this.button_Convert.UseVisualStyleBackColor = true;
+            this.button_Convert.Click += new System.EventHandler(this.button_Convert_Click);
             // 
             // button_DistanceMode
             // 
