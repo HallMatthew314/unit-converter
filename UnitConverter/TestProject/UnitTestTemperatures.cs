@@ -47,5 +47,19 @@ namespace TestProject
             double outValue = Math.Round(UnitConverter.ConversionMethods.fToC(300),3);
             Assert.AreEqual(outValue, 148.889);
         }
+
+        [TestMethod]
+        public void KToC2()
+        {
+            double outValue = Math.Round(UnitConverter.ConversionMethods.kToC(-20), 3);
+            Assert.AreEqual(outValue, "ERROR");
+        }
+
+        [TestMethod]
+        public void KToF2()
+        {
+            double outValue = Math.Round(UnitConverter.ConversionMethods.kToF(-20), 3);
+            Assert.AreEqual(outValue, "ERROR");
+        }
     }
 }
